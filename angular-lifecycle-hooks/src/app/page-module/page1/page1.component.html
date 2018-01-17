@@ -1,0 +1,18 @@
+<div class="wrapper">
+  <div class="wrapper__content">
+  <h1 class="wrapper__para">
+   I amPage 1 Component
+  
+  </h1>
+  <h3 style="color:red;">
+      Please check the console
+    </h3><br>
+  <button (click)="next()">Goto Next</button>
+</div>
+<div class="wrapper__msgs">
+  <ul style="list-style:none;">
+    <li *ngFor="let msg of lifecycleMsgs">{{msg}}</li>
+  </ul>
+  <button (click)="lifecycleMsgs = []">Clear Above Messages</button>
+</div>
+</div>

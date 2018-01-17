@@ -1,0 +1,25 @@
+<div  style="float:left">
+    <div style="float:left">
+<h1>
+  I am Page 2 Component
+ 
+</h1>
+
+<button (click)="toggle()" style="text-align: left;
+width: 32%;">Change Input on Toggle</button>
+<h3 style="color:red; width: 300px;float: left; height: 70px">
+    Please check the console for exact order of lifecycle in case of parent and child
+  </h3>
+</div>
+<div style="float:left; margin: 50px 0 0 50px;">
+  <ul style="list-style:none;">
+    <li *ngFor="let msg of lifecycleMsgs">{{msg}}</li>
+  </ul>
+  <button (click)="lifecycleMsgs = []">Clear Above Messages</button>
+  
+ </div>
+
+<app-personal-data [heading]="heading"></app-personal-data>
+
+<h3 *ngIf="isClicked">I am visible</h3>
+</div>

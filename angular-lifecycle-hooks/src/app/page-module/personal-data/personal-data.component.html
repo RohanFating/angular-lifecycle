@@ -1,0 +1,25 @@
+<div  style="float:left">
+<div style="float:left">
+<h1>
+ I am Child Component
+</h1>
+<h3>
+    {{heading}}
+</h3>
+<form>
+  <label>Name: </label>
+  <input type="text" [ngModel]="nameModel"  name="first" placeholder="Click and edit to check lifecycle hooks"/> <br/> <br/> <br/>
+  <label>Age: </label>
+  <input type="number"  [(ngModel)]="ageModel" name="age" placeholder="Click and edit to check lifecycle hooks"/>
+</form>
+<p>Model: {{nameModel}}</p>
+<br/>
+</div>
+<div style="float:left; margin: 50px 0 0 50px;">
+<b> All Lifecycle hooks calls immidiately after Page2Component's ngAfterContentChecked Callback</b>
+<ul style="list-style:none;">
+    <li *ngFor="let msg of lifecycleMsgs">{{msg}}</li>
+  </ul>
+  <button (click)="lifecycleMsgs = []">Clear Above Messages</button>
+</div>
+</div>

@@ -1,0 +1,13 @@
+.wrapper {
+    float: left
+    &__para {
+        color: black;
+    }
+
+    &__content, &__msgs {
+        float: left;
+    }
+    &__msgs {
+        margin: 0 0 0 50px;
+    }
+}
